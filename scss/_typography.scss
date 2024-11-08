@@ -1,0 +1,51 @@
+h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 54px;
+    font-weight: 700;
+    @media only screen and (max-width: 767px) {
+        font-size: 30px;
+    }
+}
+
+h2 {
+    color: $color8;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 43px;
+    font-weight: 500;
+    @media only screen and (max-width: 767px) {
+        font-size: 28px;
+    }
+}
+
+h3 {
+    color: $color8;
+    font-size: 34px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    @media only screen and (max-width: 767px) {
+        font-size: 26px;
+    }
+}
+
+h4 {
+    font-size: 21.5px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+h5 {
+    font-size: 18px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+h6 {
+    font-size: 16px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+
+// 60, 48, 32, 24, , ,
+
+
+// font-family: "Chivo", sans-serif;
+// font-family: "DM Sans", sans-serif;
+// font-family: "Space Grotesk", sans-serif;

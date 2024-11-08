@@ -1,0 +1,154 @@
+
+
+.blog-page-hero {
+    background: url(../images/blog-page/BackgroundHero.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    height: 70px;
+    background-size: cover;
+    @media only screen and (max-width: 767px) {
+        height: 40px;
+    }
+}
+
+.blog-articles {
+    height: 100%;
+    padding: 50px 0 180px;
+
+    &-bg {
+        position: absolute;
+        top: 380px;
+        z-index: 1;
+    }
+
+    .border-radius-top {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .date-read-more {
+        .blog-read-more {
+            font-weight: 700;
+            color: $color2;
+        }
+
+        a:hover {
+            color: $color6;
+        }
+
+        &:hover {
+            .ani {
+                transform: rotate(30deg);
+                transition: 0.5s ease;
+            }
+        }
+    }
+
+    &-block {
+        .card-body:hover {
+            box-shadow: 0px 4px 12px 0px #6B256C33;
+            border-radius: 10px;
+        }
+    } 
+
+    &-block {
+        .blog-card-content h4 {
+            color: $color2;
+        }
+    }
+    .load-more a {
+        padding: 7px 39px;
+        color: $color2;
+        font-weight: 700;
+        border: 2px solid $color2;
+        border-radius: 6.4px;
+        font-size: 17px;
+        &:hover {
+            background: $color2;
+            color: $color-white;
+            transition: .5s ease;
+            border: 2px solid $color-white;
+        }
+        
+    }
+    .left-content p {
+        color: $color3;
+        font-weight: 400;
+    }
+    .left-content h1 {
+        font-size: 45px;
+        color: $color2;
+        font-weight: 700;
+        @media only screen and (max-width: 767px) {
+            font-size: 30px;
+        }
+    }
+    .left-content .blog-text-content p {
+        font-size: 16px;
+    }
+    .divider hr {
+        border: 1px solid #68718B66;
+    }   
+    ol.num li {
+        list-style: decimal;
+    }
+    
+    ol.num-bold li {
+        list-style: decimal;
+        font-weight: 700;
+        font-size: 26px;
+        color: $color2;
+        @media only screen and (max-width: 767px) {
+            font-size: 20px;
+        }
+    } 
+    .left-content .blog-text-content h3 {
+        font-size: 26.5px;
+        color: $color2;
+    }
+    
+    .right-content input {
+        border: 1px solid #6B256C1A;
+    }
+    
+    .right-content input::placeholder {
+        font-size: 14px;
+        color: #6B256C66;
+        font-weight: 400;
+    }
+    
+    .right-content .input-group-append i {
+        color: $color2;
+    }
+    .related-blogs h2 {
+        color: $color2;
+    }
+    .trending-blogs {
+        background: #F389B014;
+        height: 100%;
+        .trending-blog-cards .card:hover {
+            box-shadow: 0px 4px 12px 0px #6B256C33;
+        }
+        h4 {
+            color: $color2;
+            font-weight: 700;
+        }
+        p {
+            font-size: 15.5px;
+            color: $color2;
+            font-weight: 700;
+        }
+    }
+    .right-content .trending-blog-content:hover .ani {
+        transform: rotate(30deg);
+        transition: 0.5s ease;
+    }
+}
+
+
+
+
+
+
+
+

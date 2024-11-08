@@ -1,0 +1,61 @@
+.dna {
+    position: relative;
+    background: #A85AA324;
+    padding: 70px 0 100px;
+
+    @media only screen and (max-width: 767px) {
+        padding: 40px 0;
+    }
+
+    &-block {
+        position: relative;
+
+        @media only screen and (max-width: 767px) {
+            height: 100%;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../images/work_bg.png) no-repeat;
+            z-index: 1;
+            background-size: 100%;
+            background-position: 0px -8px;
+        }
+
+        .card {
+            border-radius: 0 0 10px 10px;
+
+            @media only screen and (max-width: 767px) {
+                height: 100%;
+            }
+        }
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+    }
+
+    &:before {
+        height: 131px;
+        width: 134px;
+        right: 0;
+        background: url(../images/about/right_dna_bg.png) no-repeat;
+        background-position: 100% 0%;
+    }
+
+    &:after {
+        width: 130px;
+        height: 143px;
+        left: 0;
+        background: url(../images/about/left_dna_bg.png) no-repeat;
+        background-position: 0% 85%;
+        bottom: 0;
+    }
+}

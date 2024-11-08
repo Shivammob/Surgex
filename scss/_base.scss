@@ -1,0 +1,106 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: $color3;
+    overflow-x: hidden;
+    transition: opacity .5s 0.3s ease-in-out;
+    &.menu-show {
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+a,
+li {
+    text-decoration: none;
+    list-style-type: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+    outline: none;
+}
+
+button {
+    border: none;
+    // background-color: $color-white;
+    outline: none;
+}
+
+.btn {
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 9px 16px;
+    transition: 0.2s ease;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    &:focus {
+        box-shadow: none;
+    }
+    &.btn-yellow {
+        color: $color-white;
+        padding: 15px 40px;
+        background: linear-gradient(0deg, #F389B0, #F389B0);;
+        transition: .5s ease;
+        border-radius: 10px;
+        border: unset;
+        &:hover {
+            color: $color-white;
+            background: linear-gradient(251.02deg, #F0E91B -30.2%, #F389B0 108.07%);
+        img.ani {
+            transform: rotate(30deg);
+            transition: .5s ease;
+        }
+        span {
+            padding-left: 4px;
+            transition: .5s ease;
+        }
+        }
+    } 
+    &.btn-gradient {
+        color: $color-white;
+        background: linear-gradient(180deg, #49C5ED 0%, #8FCEA3 100.99%);
+        border: 1px solid $color-white;
+        border-radius: 54px;
+        padding: 15px 45px;
+        box-shadow: 0px 0px 27.4px 0px #FFFFFF66;
+        &:hover {
+            background: linear-gradient(96.06deg, #49C5ED 7.34%, #8FCEA3 89.04%);
+        }
+    }
+    &.btn-outline {
+        color: $color4;
+        border: 1px solid $color4;
+        padding: 12px 20px;
+        &:hover {
+            color: $color-white;
+            background-color: $color4;
+        }
+    }
+}

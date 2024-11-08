@@ -1,0 +1,87 @@
+.lead, .ad-formats {
+    background: linear-gradient(84.12deg, #A85AA3 2.94%, #6B256C 96.29%);
+    clip-path: polygon(0 10%, 100% 0, 100% 89%, 0% 100%);
+    padding: 250px 0 200px;
+    // height: 1850px;
+    @media only screen and (max-width: 767px) {
+        clip-path: none;
+        padding: 60px 0 20px;
+    }
+
+    &-list {
+        color: $color-white;
+        li {
+            position: relative;
+            border: 1px solid;
+            border-image-source: linear-gradient(280.22deg, #A85AA3 5.64%, rgba(168, 90, 163, 0) 70.96%);
+            border-image-slice: 1;
+            padding: 20px 10px;
+            border-radius: 10px;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                left: -32px;
+                width: 18px;
+                height: 18px;
+                background: $color7;
+                border-radius: 100%;
+                border: 1px solid $color-white;
+            }
+        }
+    }
+}
+
+.cst {
+    background: linear-gradient(84.12deg, #A85AA3 2.94%, #6B256C 96.29%);
+    clip-path: polygon(0 10%, 100% 0, 100% 89%, 0% 100%);
+    padding: 250px 0 200px;
+    // height: 1850px;
+    @media only screen and (max-width: 767px) {
+        clip-path: none;
+        padding: 60px 0 20px;
+    }
+    z-index: 1;
+    &-tab {
+        .nav {
+            background: #6B256C66;
+            padding: 18px;
+            border-radius: 8px;
+            justify-content: space-between;
+            width: max-content;
+            margin: 0 auto;
+            @media only screen and (max-width: 991px) {
+                flex-wrap: nowrap;
+                overflow: scroll;
+            }
+            @media only screen and (max-width: 767px) {
+                width: 100%;
+            }
+            
+            .nav-item {
+                &:last-child .nav-link {
+                    margin: 0;
+                }
+                .nav-link {
+                    color: $color-white;
+                    padding: 14px 20px;
+                    border: 1px solid $color-white;
+                    border-radius: 8px;
+                    background: transparent;
+                    margin: 0 20px 0 0;
+
+                    @media only screen and (max-width: 991px) {
+                        white-space: nowrap;
+                    }
+                
+                    &.active {
+                        background: linear-gradient(170.5deg, #A85AA3 14.71%, #6B256C 178.49%);
+                        border: unset;
+                    }
+                }
+            }
+        }
+    }
+}

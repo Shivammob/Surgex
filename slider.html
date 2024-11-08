@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuous Image Slider</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: #222;
+        }
+
+        .slider {
+            display: flex;
+            width: calc(200%);
+            animation: scroll 30s linear infinite;
+        }
+
+        .slider img {
+            width: 20%; /* Adjust this to fit the number of images */
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider-container">
+    <div class="slider">
+        <!-- First set of images -->
+        <img src="https://via.placeholder.com/400x300?text=Image+1" alt="Image 1">
+        <img src="https://via.placeholder.com/400x300?text=Image+2" alt="Image 2">
+        <img src="https://via.placeholder.com/400x300?text=Image+3" alt="Image 3">
+        <img src="https://via.placeholder.com/400x300?text=Image+4" alt="Image 4">
+        <img src="https://via.placeholder.com/400x300?text=Image+5" alt="Image 5">
+
+        <!-- Duplicate set of images for continuous effect -->
+        <img src="https://via.placeholder.com/400x300?text=Image+1" alt="Image 1">
+        <img src="https://via.placeholder.com/400x300?text=Image+2" alt="Image 2">
+        <img src="https://via.placeholder.com/400x300?text=Image+3" alt="Image 3">
+        <img src="https://via.placeholder.com/400x300?text=Image+4" alt="Image 4">
+        <img src="https://via.placeholder.com/400x300?text=Image+5" alt="Image 5">
+    </div>
+</div>
+
+</body>
+</html>
+gbmhb

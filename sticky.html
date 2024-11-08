@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Sidebar with Dynamic Content</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .left-section {
+            width: 30%;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            background-color: #f8f8f8;
+            border-right: 1px solid #ddd;
+        }
+
+        .right-section {
+            width: 70%;
+        }
+
+        .right-item {
+            height: 100vh;
+            padding: 20px;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            opacity: 0.5;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .right-item.active {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-section" id="leftContent">
+            <div class="left-item" data-target="section1">
+                <h2>Section 1</h2>
+                <p>This is the content for section 1.</p>
+            </div>
+            <div class="left-item" data-target="section2">
+                <h2>Section 2</h2>
+                <p>This is the content for section 2.</p>
+            </div>
+            <div class="left-item" data-target="section3">
+                <h2>Section 3</h2>
+                <p>This is the content for section 3.</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div id="section1" class="right-item">
+                <img src='./images/reach_acquire_logo.svg' alt='Reach & Acquire icon' class='img-fluid radius10 mb-4'>
+                <h3>Reach & Acquire</h3>
+                <p>Reach and acquire the right users with premium global traffic and creatives tailored for engagement
+                    and conversions.</p>
+            </div>
+            <div id="section2" class="right-item">
+                <img src='./images/another_image.svg' alt='Another icon' class='img-fluid radius10 mb-4'>
+                <h3>Another Section</h3>
+                <p>Another description for the second section, with different content and visuals.</p>
+            </div>
+            <div id="section3" class="right-item">
+                <img src='./images/yet_another_image.svg' alt='Yet Another icon' class='img-fluid radius10 mb-4'>
+                <h3>Yet Another Section</h3>
+                <p>Description for the third section, highlighting additional information and images.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const leftItems = document.querySelectorAll('.left-item');
+const rightItems = document.querySelectorAll('.right-item');
+
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+};
+
+const observerCallback = (entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const targetId = entry.target.getAttribute('data-target');
+            activateRightSection(targetId);
+        }
+    });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+leftItems.forEach(leftItem => observer.observe(leftItem));
+
+function activateRightSection(targetId) {
+    rightItems.forEach(rightItem => {
+        rightItem.classList.remove('active');
+        if (rightItem.id === targetId) {
+            rightItem.classList.add('active');
+        }
+    });
+}
+
+    </script>
+</body>
+
+</html>

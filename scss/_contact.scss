@@ -1,0 +1,43 @@
+.contact {
+    padding: 20px 0 250px;
+
+    // &:after {
+    //     content: "";
+    //     position: absolute;
+    //     height: 100%;
+    //     width: 100%;
+    //     z-index: -1;
+    //     top: 0;
+    //     left: 0;
+    //     background: url(../images/contact/line_bg.png) no-repeat;
+    //     background-position: 0% 70%;
+    // }
+}
+
+.contact-bg {
+    img {
+        position: absolute;
+        right: 0;
+        top: -180px;
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+}
+
+.contact-form {
+    .form-floating {
+
+        input,
+        textarea {
+            color: $color2;
+            font-size: 14px;
+            border: 1px solid #6B256C70;
+        }
+
+        label {
+            color: $color2;
+            font-size: 14px;
+        }
+    }
+}
